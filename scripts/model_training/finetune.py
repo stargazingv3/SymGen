@@ -122,7 +122,7 @@ def train(
         load_in_8bit=True,
         torch_dtype=torch.float16,
         device_map=device_map,
-        cache_dir='/data/local/linxi/models',
+        cache_dir=os.environ.get("TRANSFORMERS_CACHE", "/app/.cache/huggingface"),
     )
 
     # tokenizer = LlamaTokenizer.from_pretrained(base_model)

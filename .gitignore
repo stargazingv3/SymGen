@@ -7,3 +7,5 @@ source_code/
 *__pycache__*
 *tmp*
 *.env
+.nv
+.triton

@@ -61,7 +61,7 @@ def main(
             load_in_8bit=load_8bit,
             torch_dtype=torch.float16,
             device_map="auto",
-            cache_dir='/data/local/linxi/models',
+            cache_dir=os.environ.get("TRANSFORMERS_CACHE", "/app/.cache/huggingface"),
         )
         model = PeftModel.from_pretrained(
             model,

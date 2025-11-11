@@ -9,6 +9,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
+# Create a user entry to avoid getpass.getuser() errors when running as non-root
+# This allows PyTorch to work properly when container runs with user: "${UID}:${GID}"
+RUN useradd -m -u 1001 -s /bin/bash appuser || true
+
 COPY requirements.txt .
 
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
@@ -24,12 +28,10 @@ COPY . .
 # This allows you to pip install packages on-the-fly inside the
 # running container as a non-root user without permission errors.
 
-RUN mkdir -p /app/results /app/.cache /app/.local /app/.config && \
+RUN mkdir -p /app/results /app/.cache /app/.local /app/.config /app/.cache/torch && \
     chmod -R 777 /app/results /app/.cache /app/.local /app/.config
 
 ENV PYTHONUNBUFFERED=1
-ENV TRANSFORMERS_CACHE=/app/.cache/huggingface
-ENV HF_HOME=/app/.cache/huggingface
 
 #CMD ["bash"]
 CMD ["tail", "-f", "/dev/null"]

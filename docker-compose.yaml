@@ -11,7 +11,6 @@ services:
       - /data:/app/data
     shm_size: '16g'
     user: "${UID}:${GID}"
-    # GPU support
     deploy:
       resources:
         reservations:
@@ -19,7 +18,6 @@ services:
             - driver: nvidia
               count: all
               capabilities: [gpu]
-    # Keep container running in detached mode
     stdin_open: false
     tty: false
     restart: unless-stopped

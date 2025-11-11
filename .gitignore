@@ -4,3 +4,6 @@ data/
 ghidra_10.4_PUBLIC/
 scripts/decompilation/ghidra_project/
 source_code/
+*__pycache__*
+*tmp*
+*.env

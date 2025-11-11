@@ -1,0 +1,31 @@
+services:
+  symgen:
+    build: .
+    container_name: symgen_container
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - symgen_cache:/app/.cache
+      - symgen_results:/app/results
+      - /data:/app/data
+    shm_size: '16g'
+    user: "${UID}:${GID}"
+    # GPU support
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    # Keep container running in detached mode
+    stdin_open: false
+    tty: false
+    restart: unless-stopped
+
+volumes:
+  symgen_cache:
+    driver: local
+  symgen_results:
+    driver: local

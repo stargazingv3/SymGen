@@ -39,7 +39,8 @@ RUN python -c "import nltk; nltk.download('averaged_perceptron_tagger', quiet=Tr
 ENV GHIDRA_VERSION=11.4.2
 ENV GHIDRA_INSTALL_DIR=/opt/ghidra
 ENV JAVA_HOME=/usr/lib/jvm/temurin-21-jdk-amd64
-ENV LD_LIBRARY_PATH=/usr/lib/jvm/temurin-21-jdk-amd64/lib/:/usr/lib/jvm/temurin-21-jdk-amd64/lib/server/
+# Set LD_LIBRARY_PATH to include CUDA libraries (for PyTorch GPU support), system libs, and Java libraries (for Ghidra)
+ENV LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/usr/local/lib/python3.10/site-packages/nvidia/cuda_runtime/lib:/usr/local/lib/python3.10/site-packages/nvidia/cublas/lib:/usr/local/lib/python3.10/site-packages/nvidia/cudnn/lib:/usr/local/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/usr/local/lib/python3.10/site-packages/nvidia/cusparse/lib:/usr/local/lib/python3.10/site-packages/nvidia/cusolver/lib:/usr/local/lib/python3.10/site-packages/nvidia/curand/lib:/usr/local/lib/python3.10/site-packages/nvidia/cufft/lib:/usr/local/lib/python3.10/site-packages/nvidia/nccl/lib:/usr/lib/jvm/temurin-21-jdk-amd64/lib/:/usr/lib/jvm/temurin-21-jdk-amd64/lib/server/
 
 RUN mkdir -p /opt/ghidra && \
     wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_${GHIDRA_VERSION}_build/ghidra_${GHIDRA_VERSION}_PUBLIC_20250826.zip -O /tmp/ghidra.zip && \
@@ -57,7 +58,7 @@ RUN sed -i 's|^JAVA_HOME_OVERRIDE=$|JAVA_HOME_OVERRIDE=/usr/lib/jvm/temurin-21-j
 # Create a wrapper script for analyzeHeadless that sets JAVA_HOME and LD_LIBRARY_PATH
 RUN echo '#!/bin/bash\n\
 export JAVA_HOME=/usr/lib/jvm/temurin-21-jdk-amd64\n\
-export LD_LIBRARY_PATH=/usr/lib/jvm/temurin-21-jdk-amd64/lib/:/usr/lib/jvm/temurin-21-jdk-amd64/lib/server/\n\
+export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/usr/local/lib/python3.10/site-packages/nvidia/cuda_runtime/lib:/usr/local/lib/python3.10/site-packages/nvidia/cublas/lib:/usr/local/lib/python3.10/site-packages/nvidia/cudnn/lib:/usr/local/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/usr/local/lib/python3.10/site-packages/nvidia/cusparse/lib:/usr/local/lib/python3.10/site-packages/nvidia/cusolver/lib:/usr/local/lib/python3.10/site-packages/nvidia/curand/lib:/usr/local/lib/python3.10/site-packages/nvidia/cufft/lib:/usr/local/lib/python3.10/site-packages/nvidia/nccl/lib:/usr/lib/jvm/temurin-21-jdk-amd64/lib/:/usr/lib/jvm/temurin-21-jdk-amd64/lib/server/\n\
 exec /opt/ghidra/support/analyzeHeadless "$@"' > /usr/local/bin/analyzeHeadless && \
     chmod +x /usr/local/bin/analyzeHeadless
 

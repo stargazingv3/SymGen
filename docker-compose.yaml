@@ -5,13 +5,17 @@ services:
     container_name: symgen_container
     env_file:
       - .env
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+      - CUDA_VISIBLE_DEVICES=0,1
     volumes:
       - .:/app
       - symgen_cache:/app/.cache
       - ./results:/app/results
       - symgen_ghidra_projects:/app/ghidra_projects
       - /data:/app/data
-    shm_size: '16g'
+    shm_size: '256gb'
     user: "${UID}:${GID}"
     deploy:
       resources:

@@ -1,0 +1,6 @@
+python scripts/decompilation/parallel_decomp.py \
+    -s \
+    --binary_path /app/binaries/windows_helloWorld \
+    --ghidra_path analyzeHeadless \
+    --project_path /app/ghidra_projects \
+    --output_dir /app/results/decompiled_stripped

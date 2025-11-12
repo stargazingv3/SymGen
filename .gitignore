@@ -9,3 +9,4 @@ source_code/
 *.env
 .nv
 .triton
+results/*

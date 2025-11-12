@@ -198,17 +198,21 @@ def main(args):
         print("Error! You can just choose one mode '-d' or '-p'")
         sys.exit(0)
 
-    unstripped_path = args.unstripped_path
-    stripped_path = args.stripped_path
     output_dir = args.output_dir
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir, exist_ok=True)
 
     if args.dataset:
-        process_dataset(unstripped_path, stripped_path, output_dir)
+        if not args.unstripped_path or not args.stripped_path:
+            print("Error! Both --unstripped_path and --stripped_path are required for dataset mode (-d)")
+            sys.exit(1)
+        process_dataset(args.unstripped_path, args.stripped_path, output_dir)
     elif args.prediction:
-        process_binaries_for_prediction(stripped_path, output_dir)
+        if not args.stripped_path:
+            print("Error! --stripped_path is required for prediction mode (-p)")
+            sys.exit(1)
+        process_binaries_for_prediction(args.stripped_path, output_dir)
     else:
         print("Error! You should choose one mode '-d' or '-p'. Use '-h' to check.")
         sys.exit(0)
@@ -220,12 +224,12 @@ if __name__ == '__main__':
         help='Indicates the purpose of generating a new dataset for training and testing purposes.')
     parser.add_argument('-p', '--prediction', action='store_true',
         help='Indicates the purpose of prediction of a new stripped binary.')
-    parser.add_argument('-u', '--unstripped_path', type=str, required=True,
-        # default='',
-        help="Path to JSON files containing decompiled unstripped binaries.")
-    parser.add_argument('-s', '--stripped_path', type=str, required=True,
-        # default='',
-        help="Path to JSON files containing decompiled stripped binaries.")
+    parser.add_argument('-u', '--unstripped_path', type=str, required=False,
+        default=None,
+        help="Path to JSON files containing decompiled unstripped binaries. Required for dataset mode (-d).")
+    parser.add_argument('-s', '--stripped_path', type=str, required=False,
+        default=None,
+        help="Path to JSON files containing decompiled stripped binaries. Required for prediction mode (-p).")
     parser.add_argument('-o', '--output_dir', type=str, required=True,
         # default='',
         help='Directory to save the output files.')

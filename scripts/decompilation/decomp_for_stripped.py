@@ -3,18 +3,25 @@ import json
 from ghidra.app.decompiler import DecompInterface
 from ghidra.util.task import ConsoleTaskMonitor
 
+# Get script arguments - first argument should be the output file path
+args = getScriptArgs()
+if len(args) < 1:
+    raise Exception("Please provide output file path as argument: -postScript script.py <output_file_path>")
+
+output_file_path = args[0]
+print("Output file path: {}".format(output_file_path))
+
+# Create output directory if it doesn't exist
+output_dir = os.path.dirname(output_file_path)
+if output_dir and not os.path.exists(output_dir):
+    print("Creating output directory: {}".format(output_dir))
+    try:
+        os.makedirs(output_dir)
+    except OSError:
+        pass  # Directory might have been created by another process
+
 file_path = str(getProgramFile())
 print("1. load the binary file: ", file_path)
-output_dir = ""
-assert (
-    output_dir
-), "Please provide the dir to save the results in 'decompilation/decom_for_stripped.py'"
-output_file_path = os.path.join(output_dir, file_path.split('/')[-1] + '.json')
-
-
-if not os.path.exists(output_dir):
-    print("2. create the output folder: ", output_dir)
-    os.makedirs(output_dir)
 
 def get_data_type_info(f, var, is_arg, count):
     # variable name and type

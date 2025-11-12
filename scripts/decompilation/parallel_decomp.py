@@ -1,3 +1,4 @@
+import os
 import os.path
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 import threading
@@ -15,9 +16,12 @@ executor = ThreadPoolExecutor(max_workers=thread_num)
 ghidra_projects = [f'parser_{i}/' for i in range(10)]
 
 
-def process_unstripped_binary(ghidra_path, project_path, project_name, binary_path):
+def process_unstripped_binary(ghidra_path, project_path, project_name, binary_path, output_dir):
     print(f"[*] hold {project_name} for {binary_path}")
-    cmd = f"{ghidra_path} {project_path} {project_name} -import {binary_path} -readOnly -postScript ./decompilation/decomp_for_unstripped.py"
+    # Generate output file path: output_dir/binary_filename.json
+    binary_filename = os.path.basename(binary_path)
+    output_file_path = os.path.join(output_dir, binary_filename + '.json')
+    cmd = f"{ghidra_path} {project_path} {project_name} -import {binary_path} -readOnly -postScript scripts/decompilation/decomp_for_unstripped.py {output_file_path}"
     try:
         subprocess.run(cmd, shell=True, timeout=900*4)
     except subprocess.TimeoutExpired:
@@ -26,9 +30,12 @@ def process_unstripped_binary(ghidra_path, project_path, project_name, binary_pa
     print(f"[+] release {project_name} after finishing {binary_path}")
 
 
-def process_stripped_binary(ghidra_path, project_path, project_name, binary_path):
+def process_stripped_binary(ghidra_path, project_path, project_name, binary_path, output_dir):
     print(f"[*] hold {project_name} for {binary_path}")
-    cmd = f"{ghidra_path} {project_path} {project_name} -import {binary_path} -readOnly -postScript ./decompilation/decomp_for_stripped.py"
+    # Generate output file path: output_dir/binary_filename.json
+    binary_filename = os.path.basename(binary_path)
+    output_file_path = os.path.join(output_dir, binary_filename + '.json')
+    cmd = f"{ghidra_path} {project_path} {project_name} -import {binary_path} -readOnly -postScript scripts/decompilation/decomp_for_stripped.py {output_file_path}"
     try:
         subprocess.run(cmd, shell=True, timeout=900*4)
     except subprocess.TimeoutExpired:
@@ -39,6 +46,13 @@ def process_stripped_binary(ghidra_path, project_path, project_name, binary_path
 
 def main(args):
     binary_path = args.binary_path
+    output_dir = args.output_dir
+    
+    # Create output directory if it doesn't exist
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir, exist_ok=True)
+        print(f"[+] Created output directory: {output_dir}")
+    
     if os.path.isfile(binary_path):
         print(f"[+] start to process {binary_path}")
         while len(ghidra_projects) == 0:
@@ -49,7 +63,8 @@ def main(args):
                         ghidra_path=args.ghidra_path,
                         project_path=args.project_path,
                         project_name=ghidra_project,
-                        binary_path=binary_path,)
+                        binary_path=binary_path,
+                        output_dir=output_dir)
     elif os.path.isdir(binary_path):
         for root, dirs, files in os.walk(binary_path):
             for file in files:
@@ -63,7 +78,8 @@ def main(args):
                         ghidra_path=args.ghidra_path,
                         project_path=args.project_path,
                         project_name=ghidra_project,
-                        binary_path=binary_path,)
+                        binary_path=binary_file_path,
+                        output_dir=output_dir)
                 while executor._work_queue.qsize() > thread_num:
                     print("Wait for executor: 1 sec", executor._work_queue.qsize())
                     time.sleep(1)
@@ -86,6 +102,8 @@ if __name__ == '__main__':
     parser.add_argument('-p', '--project_path', type=str, required=True,
         # default='',
         help="Specify the directory path to Ghidra projects.")
+    parser.add_argument('-o', '--output_dir', type=str, required=True,
+        help="Specify the output directory where decompiled JSON files will be saved.")
     args = parser.parse_args()
 
     if args.unstripped == True and args.stripped == True or args.unstripped == False and args.stripped == False:

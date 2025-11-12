@@ -1,0 +1,1514 @@
+{
+    "000014ac": {
+        "decomp_code": "\n/* WARNING: Unknown calling convention -- yet parameter storage is locked */\n\nvoid _amsg_exit(int param_1)\n\n{\n                    /* WARNING: Could not recover jumptable at 0x000014b4. Too many branches */\n                    /* WARNING: Treating indirect jump as call */\n  (*pcRam0040206c)(param_1);\n  return;\n}\n\n", 
+        "args_metadata": {
+            "param_1": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "int", 
+                "register": "r0"
+            }
+        }, 
+        "assembly": [
+            "movw r12,#0x206c", 
+            "movt r12,#0x40", 
+            "ldr.w pc,[r12,#0x0]"
+        ], 
+        "function_address": {
+            "start": "000014ac", 
+            "end": "000014b7"
+        }, 
+        "variable_metadata": {
+            "param_1": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "int"
+            }
+        }, 
+        "func_name": "_amsg_exit"
+    }, 
+    "00001476": {
+        "decomp_code": "\nvoid FUN_00001476(void)\n\n{\n  _unlock(8);\n  return;\n}\n\n", 
+        "args_metadata": {}, 
+        "assembly": [
+            "push {r4,lr}", 
+            "movs r0,#0x8", 
+            "bl 0x00001688", 
+            "pop {r4,pc}"
+        ], 
+        "function_address": {
+            "start": "00001476", 
+            "end": "0000147f"
+        }, 
+        "variable_metadata": {}, 
+        "func_name": "FUN_00001476"
+    }, 
+    "0000138c": {
+        "decomp_code": "\nvoid FUN_0000138c(void)\n\n{\n  undefined4 *puVar1;\n  undefined4 *puVar2;\n  code *pcVar3;\n  undefined4 *puVar4;\n  \n  puVar2 = DAT_000013b0;\n  puVar1 = (undefined4 *)(DAT_000013b4 + 4);\n  while (puVar1 < puVar2) {\n    puVar4 = puVar1 + 1;\n    pcVar3 = (code *)*puVar1;\n    puVar1 = puVar4;\n    if (pcVar3 != (code *)0x0) {\n      (*pcVar3)();\n    }\n  }\n  return;\n}\n\n", 
+        "args_metadata": {}, 
+        "assembly": [
+            "push {r4,r5,r11,lr}", 
+            "addw r11,sp,#0x8", 
+            "ldr r3,[0x000013b4]", 
+            "ldr r5,[0x000013b0]", 
+            "adds r4,r3,#0x4", 
+            "adds r3,#0x4", 
+            "cmp r3,r5", 
+            "bcs 0x000013ac", 
+            "ldr.w r3,[r4],#0x4", 
+            "cbz r3,0x000013a8", 
+            "blx r3", 
+            "cmp r4,r5", 
+            "bcc 0x000013a0", 
+            "pop.w {r4,r5,r11,pc}"
+        ], 
+        "function_address": {
+            "start": "0000138c", 
+            "end": "000013af"
+        }, 
+        "variable_metadata": {}, 
+        "func_name": "FUN_0000138c"
+    }, 
+    "000011c8": {
+        "decomp_code": "\nvoid FUN_000011c8(_EXCEPTION_POINTERS *param_1)\n\n{\n  _XcptFilter(param_1->ExceptionRecord->ExceptionCode,param_1);\n  return;\n}\n\n", 
+        "args_metadata": {
+            "param_1": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": true
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "_EXCEPTION_POINTERS *", 
+                "register": "r0"
+            }
+        }, 
+        "assembly": [
+            "push {r4,lr}", 
+            "mov r1,r0", 
+            "ldr r3,[r1,#0x0]", 
+            "ldr r0,[r3,#0x0]", 
+            "bl 0x000015a8", 
+            "pop {r4,pc}"
+        ], 
+        "function_address": {
+            "start": "000011c8", 
+            "end": "000011d5"
+        }, 
+        "variable_metadata": {
+            "param_1": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": true
+                }, 
+                "addresses": [], 
+                "type": "_EXCEPTION_POINTERS *"
+            }
+        }, 
+        "func_name": "FUN_000011c8"
+    }, 
+    "000014c4": {
+        "decomp_code": "\n/* WARNING: Unknown calling convention: __cdecl */\n\nvoid __cdecl initterm_e(void)\n\n{\n                    /* WARNING: Could not recover jumptable at 0x000014cc. Too many branches */\n                    /* WARNING: Treating indirect jump as call */\n  (*pcRam0040203c)();\n  return;\n}\n\n", 
+        "args_metadata": {}, 
+        "assembly": [
+            "movw r12,#0x203c", 
+            "movt r12,#0x40", 
+            "ldr.w pc,[r12,#0x0]"
+        ], 
+        "function_address": {
+            "start": "000014c4", 
+            "end": "000014cf"
+        }, 
+        "variable_metadata": {}, 
+        "func_name": "initterm_e"
+    }, 
+    "000012e4": {
+        "decomp_code": "\nvoid entry(void)\n\n{\n  FUN_000015b8();\n  FUN_000010b4();\n  return;\n}\n\n", 
+        "args_metadata": {}, 
+        "assembly": [
+            "push {r11,lr}", 
+            "mov r11,sp", 
+            "bl 0x000015b8", 
+            "bl 0x000010b4", 
+            "pop.w {r11,pc}"
+        ], 
+        "function_address": {
+            "start": "000012e4", 
+            "end": "000012f5"
+        }, 
+        "variable_metadata": {}, 
+        "func_name": "entry"
+    }, 
+    "00001000": {
+        "decomp_code": "\nundefined4 FUN_00001000(undefined4 param_1,undefined4 param_2,undefined4 param_3)\n\n{\n  (*pcRam00402078)(0x4020e0);\n  return 0;\n}\n\n", 
+        "args_metadata": {
+            "param_1": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "undefined4", 
+                "register": "r0"
+            }, 
+            "param_2": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "undefined4", 
+                "register": "r1"
+            }, 
+            "param_3": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "undefined4", 
+                "register": "r2"
+            }
+        }, 
+        "assembly": [
+            "push {r11,lr}", 
+            "mov r11,sp", 
+            "movw r3,#0x2078", 
+            "movt r3,#0x40", 
+            "movw r0,#0x20e0", 
+            "movt r0,#0x40", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "movs r0,#0x0", 
+            "pop.w {r11,pc}"
+        ], 
+        "function_address": {
+            "start": "00001000", 
+            "end": "0000101f"
+        }, 
+        "variable_metadata": {
+            "param_1": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "undefined4"
+            }, 
+            "param_2": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "undefined4"
+            }, 
+            "param_3": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "undefined4"
+            }
+        }, 
+        "func_name": "FUN_00001000"
+    }, 
+    "00001360": {
+        "decomp_code": "\nvoid FUN_00001360(void)\n\n{\n  undefined4 *puVar1;\n  undefined4 *puVar2;\n  code *pcVar3;\n  undefined4 *puVar4;\n  \n  puVar2 = DAT_00001384;\n  puVar1 = (undefined4 *)(DAT_00001388 + 4);\n  while (puVar1 < puVar2) {\n    puVar4 = puVar1 + 1;\n    pcVar3 = (code *)*puVar1;\n    puVar1 = puVar4;\n    if (pcVar3 != (code *)0x0) {\n      (*pcVar3)();\n    }\n  }\n  return;\n}\n\n", 
+        "args_metadata": {}, 
+        "assembly": [
+            "push {r4,r5,r11,lr}", 
+            "addw r11,sp,#0x8", 
+            "ldr r3,[0x00001388]", 
+            "ldr r5,[0x00001384]", 
+            "adds r4,r3,#0x4", 
+            "adds r3,#0x4", 
+            "cmp r3,r5", 
+            "bcs 0x00001380", 
+            "ldr.w r3,[r4],#0x4", 
+            "cbz r3,0x0000137c", 
+            "blx r3", 
+            "cmp r4,r5", 
+            "bcc 0x00001374", 
+            "pop.w {r4,r5,r11,pc}"
+        ], 
+        "function_address": {
+            "start": "00001360", 
+            "end": "00001383"
+        }, 
+        "variable_metadata": {}, 
+        "func_name": "FUN_00001360"
+    }, 
+    "000015a8": {
+        "decomp_code": "\n/* WARNING: Unknown calling convention -- yet parameter storage is locked */\n\nint _XcptFilter(ulong _ExceptionNum,_EXCEPTION_POINTERS *_ExceptionPtr)\n\n{\n  int iVar1;\n  \n                    /* WARNING: Could not recover jumptable at 0x000015b0. Too many branches */\n                    /* WARNING: Treating indirect jump as call */\n  iVar1 = (*pcRam00402028)(_ExceptionNum);\n  return iVar1;\n}\n\n", 
+        "args_metadata": {
+            "_ExceptionPtr": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": true
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "_EXCEPTION_POINTERS *", 
+                "register": "r1"
+            }, 
+            "_ExceptionNum": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "ulong", 
+                "register": "r0"
+            }
+        }, 
+        "assembly": [
+            "movw r12,#0x2028", 
+            "movt r12,#0x40", 
+            "ldr.w pc,[r12,#0x0]"
+        ], 
+        "function_address": {
+            "start": "000015a8", 
+            "end": "000015b3"
+        }, 
+        "variable_metadata": {
+            "_ExceptionPtr": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": true
+                }, 
+                "addresses": [], 
+                "type": "_EXCEPTION_POINTERS *"
+            }, 
+            "_ExceptionNum": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "ulong"
+            }
+        }, 
+        "func_name": "_XcptFilter"
+    }, 
+    "00001060": {
+        "decomp_code": "\nvoid FUN_00001060(undefined4 param_1,PVOID param_2,undefined4 param_3,undefined4 param_4)\n\n{\n  int iVar1;\n  int iVar2;\n  code *pcVar3;\n  \n  FUN_00001494(DAT_000010b0,param_2,param_3,param_4);\n  iVar1 = DAT_000010a8;\n  iVar2 = DAT_000010a8 + 4;\n  pcVar3 = (code *)*DAT_000010a4;\n  *(undefined4 *)(DAT_000010a8 + 0x14) = *DAT_000010ac;\n  iVar2 = (*pcVar3)(iVar1,iVar1 + 8,iVar2,*DAT_000010a0,iVar1 + 0x14,param_4);\n  *(int *)(iVar1 + 0x10) = iVar2;\n  if (iVar2 < 0) {\n    _amsg_exit(8);\n  }\n  return;\n}\n\n", 
+        "args_metadata": {
+            "param_1": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "undefined4", 
+                "register": "r0"
+            }, 
+            "param_2": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "void *", 
+                "register": "r1"
+            }, 
+            "param_3": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "undefined4", 
+                "register": "r2"
+            }, 
+            "param_4": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "undefined4", 
+                "register": "r3"
+            }
+        }, 
+        "assembly": [
+            "push {r2,r3,r4,r5,r11,lr}", 
+            "addw r11,sp,#0x10", 
+            "ldr r0,[0x000010b0]", 
+            "bl 0x00001494", 
+            "ldr r3,[0x000010ac]", 
+            "ldr r5,[0x000010a8]", 
+            "ldr r4,[0x000010a4]", 
+            "ldr r3,[r3,#0x0]", 
+            "adds r2,r5,#0x4", 
+            "ldr r4,[r4,#0x0]", 
+            "str r3,[r5,#0x14]", 
+            "mov r3,r5", 
+            "adds r3,#0x14", 
+            "str r3,[sp,#0x0]", 
+            "ldr r3,[0x000010a0]", 
+            "adds.w r1,r5,#0x8", 
+            "mov r0,r5", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r4", 
+            "str r0,[r5,#0x10]", 
+            "cmp r0,#0x0", 
+            "bge 0x0000109a", 
+            "movs r0,#0x8", 
+            "bl 0x000014ac", 
+            "pop.w {r2,r3,r4,r5,r11,pc}"
+        ], 
+        "function_address": {
+            "start": "00001060", 
+            "end": "0000109d"
+        }, 
+        "variable_metadata": {
+            "param_1": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "undefined4"
+            }, 
+            "local_18": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [
+                    "00001080"
+                ], 
+                "type": "undefined4"
+            }, 
+            "param_2": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "void *"
+            }, 
+            "param_3": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "undefined4"
+            }, 
+            "param_4": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "undefined4"
+            }
+        }, 
+        "func_name": "FUN_00001060"
+    }, 
+    "00001348": {
+        "decomp_code": "\nundefined4 FUN_00001348(void)\n\n{\n  __crtSetUnhandledExceptionFilter(DAT_0000135c);\n  return 0;\n}\n\n", 
+        "args_metadata": {}, 
+        "assembly": [
+            "push {r11,lr}", 
+            "mov r11,sp", 
+            "ldr r0,[0x0000135c]", 
+            "bl 0x00001664", 
+            "movs r0,#0x0", 
+            "pop.w {r11,pc}"
+        ], 
+        "function_address": {
+            "start": "00001348", 
+            "end": "00001359"
+        }, 
+        "variable_metadata": {}, 
+        "func_name": "FUN_00001348"
+    }, 
+    "00001688": {
+        "decomp_code": "\n/* WARNING: Unknown calling convention -- yet parameter storage is locked */\n\nvoid _unlock(int _File)\n\n{\n                    /* WARNING: Could not recover jumptable at 0x00001690. Too many branches */\n                    /* WARNING: Treating indirect jump as call */\n  (*pcRam00402058)(_File);\n  return;\n}\n\n", 
+        "args_metadata": {
+            "_File": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "int", 
+                "register": "r0"
+            }
+        }, 
+        "assembly": [
+            "movw r12,#0x2058", 
+            "movt r12,#0x40", 
+            "ldr.w pc,[r12,#0x0]"
+        ], 
+        "function_address": {
+            "start": "00001688", 
+            "end": "00001693"
+        }, 
+        "variable_metadata": {
+            "_File": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "int"
+            }
+        }, 
+        "func_name": "_unlock"
+    }, 
+    "00001544": {
+        "decomp_code": "\nvoid FUN_00001544(int param_1)\n\n{\n  int iVar1;\n  \n  iVar1 = FUN_000014dc((short *)0x400000);\n  if (iVar1 != 0) {\n    FUN_00001508(0x400000,param_1 - 0x400000);\n  }\n  return;\n}\n\n", 
+        "args_metadata": {
+            "param_1": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "int", 
+                "register": "r0"
+            }
+        }, 
+        "assembly": [
+            "push {r3,r4,r5,r7,r11,lr}", 
+            "addw r11,sp,#0x10", 
+            "mov r7,sp", 
+            "mov r4,r0", 
+            "movw r5,#0x0", 
+            "movt r5,#0x40", 
+            "mov r0,r5", 
+            "bl 0x000014dc", 
+            "cbnz r0,0x00001566", 
+            "movs r0,#0x0", 
+            "str r0,[r7,#0x0]", 
+            "b 0x0000158e", 
+            "subs r1,r4,r5", 
+            "mov r0,r5", 
+            "bl 0x00001508", 
+            "cbnz r0,0x00001576", 
+            "movs r0,#0x0", 
+            "str r0,[r7,#0x0]", 
+            "b 0x0000158e", 
+            "ldr r3,[r0,#0x24]", 
+            "tst r3,#0x80000000", 
+            "bne 0x00001582", 
+            "movs r0,#0x1", 
+            "b 0x00001584", 
+            "movs r0,#0x0", 
+            "str r0,[r7,#0x0]", 
+            "b 0x0000158e", 
+            "pop.w {r3,r4,r5,r7,r11,pc}"
+        ], 
+        "function_address": {
+            "start": "00001544", 
+            "end": "00001591"
+        }, 
+        "variable_metadata": {
+            "param_1": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "int"
+            }, 
+            "local_18": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [
+                    "00001562", 
+                    "00001572", 
+                    "00001584"
+                ], 
+                "type": "undefined4"
+            }
+        }, 
+        "func_name": "FUN_00001544"
+    }, 
+    "00001400": {
+        "decomp_code": "\n_onexit_t FUN_00001400(_onexit_t param_1,PVOID param_2,undefined4 param_3,undefined4 param_4)\n\n{\n  undefined4 *puVar1;\n  undefined4 *puVar2;\n  undefined4 uVar3;\n  _onexit_t local_28;\n  PVOID local_24;\n  _onexit_t local_20;\n  undefined4 uStack_1c;\n  \n  puVar2 = DAT_00001490;\n  local_28 = param_1;\n  local_24 = param_2;\n  local_20 = (_onexit_t)param_3;\n  uStack_1c = param_4;\n  local_28 = (_onexit_t)(*(code *)*DAT_00001484)(*DAT_00001490);\n  if (local_28 == (_onexit_t)0xffffffff) {\n    local_20 = (_onexit_t)(*(code *)*DAT_0000148c)(param_1);\n  }\n  else {\n    _lock(8);\n    local_28 = (_onexit_t)(*(code *)*DAT_00001484)(*puVar2);\n    puVar1 = DAT_00001488;\n    local_24 = (PVOID)(*(code *)*DAT_00001484)(*DAT_00001488);\n    uVar3 = (*(code *)*DAT_00001480)(param_1);\n    local_20 = (_onexit_t)__dllonexit(uVar3,&local_28,&local_24);\n    uVar3 = (*(code *)*DAT_00001480)(local_28);\n    *puVar2 = uVar3;\n    uVar3 = (*(code *)*DAT_00001480)(local_24);\n    *puVar1 = uVar3;\n    FUN_00001476();\n  }\n  return local_20;\n}\n\n", 
+        "args_metadata": {
+            "param_1": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "_onexit_t *", 
+                "register": "r0"
+            }, 
+            "param_2": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "void *", 
+                "register": "r1"
+            }, 
+            "param_3": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "undefined4", 
+                "register": "r2"
+            }, 
+            "param_4": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "undefined4", 
+                "register": "r3"
+            }
+        }, 
+        "assembly": [
+            "push {r0,r1,r2,r3,r4,r5,r6,r7,r11,lr}", 
+            "addw r11,sp,#0x20", 
+            "mov r7,sp", 
+            "mov r5,r0", 
+            "ldr r6,[0x00001490]", 
+            "ldr r0,[r6,#0x0]", 
+            "ldr r3,[0x00001484]", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "str r0,[r7,#0x0]", 
+            "cmp.w r0,#0xffffffff", 
+            "bne 0x00001428", 
+            "mov r0,r5", 
+            "ldr r3,[0x0000148c]", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "b 0x00001470", 
+            "movs r0,#0x8", 
+            "bl 0x00001670", 
+            "ldr r0,[r6,#0x0]", 
+            "ldr r3,[0x00001484]", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "str r0,[r7,#0x0]", 
+            "ldr r4,[0x00001488]", 
+            "ldr r0,[r4,#0x0]", 
+            "ldr r3,[0x00001484]", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "str r0,[r7,#0x4]", 
+            "mov r0,r5", 
+            "ldr r3,[0x00001480]", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "adds r2,r7,#0x4", 
+            "mov r1,r7", 
+            "bl 0x0000167c", 
+            "str r0,[r7,#0x8]", 
+            "ldr r0,[r7,#0x0]", 
+            "ldr r3,[0x00001480]", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "str r0,[r6,#0x0]", 
+            "ldr r0,[r7,#0x4]", 
+            "ldr r3,[0x00001480]", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "str r0,[r4,#0x0]", 
+            "bl 0x00001476", 
+            "ldr r0,[r7,#0x8]", 
+            "add sp,#0x10", 
+            "pop.w {r4,r5,r6,r7,r11,pc}"
+        ], 
+        "function_address": {
+            "start": "00001400", 
+            "end": "00001475"
+        }, 
+        "variable_metadata": {
+            "param_1": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "_onexit_t *"
+            }, 
+            "local_28": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [
+                    "00001416", 
+                    "00001436", 
+                    "00001456"
+                ], 
+                "type": "undefined4"
+            }, 
+            "param_2": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "void *"
+            }, 
+            "param_3": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "undefined4"
+            }, 
+            "param_4": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "undefined4"
+            }, 
+            "local_20": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [
+                    "00001454", 
+                    "0000146e"
+                ], 
+                "type": "undefined4"
+            }, 
+            "local_24": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [
+                    "00001442", 
+                    "00001460"
+                ], 
+                "type": "undefined4"
+            }
+        }, 
+        "func_name": "FUN_00001400"
+    }, 
+    "00001664": {
+        "decomp_code": "\n/* WARNING: Unknown calling convention -- yet parameter storage is locked */\n\nvoid __crtSetUnhandledExceptionFilter(LPTOP_LEVEL_EXCEPTION_FILTER exceptionFilter)\n\n{\n                    /* WARNING: Could not recover jumptable at 0x0000166c. Too many branches */\n                    /* WARNING: Treating indirect jump as call */\n  (*pcRam00402044)(exceptionFilter);\n  return;\n}\n\n", 
+        "args_metadata": {
+            "exceptionFilter": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "PTOP_LEVEL_EXCEPTION_FILTER *", 
+                "register": "r0"
+            }
+        }, 
+        "assembly": [
+            "movw r12,#0x2044", 
+            "movt r12,#0x40", 
+            "ldr.w pc,[r12,#0x0]"
+        ], 
+        "function_address": {
+            "start": "00001664", 
+            "end": "0000166f"
+        }, 
+        "variable_metadata": {
+            "exceptionFilter": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "PTOP_LEVEL_EXCEPTION_FILTER *"
+            }
+        }, 
+        "func_name": "__crtSetUnhandledExceptionFilter"
+    }, 
+    "000014dc": {
+        "decomp_code": "\nundefined4 FUN_000014dc(short *param_1)\n\n{\n  if (((*param_1 == 0x5a4d) && (*(int *)(*(int *)(param_1 + 0x1e) + (int)param_1) == 0x4550)) &&\n     (*(short *)((int)param_1 + *(int *)(param_1 + 0x1e) + 0x18) == 0x10b)) {\n    return 1;\n  }\n  return 0;\n}\n\n", 
+        "args_metadata": {
+            "param_1": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "short *", 
+                "register": "r0"
+            }
+        }, 
+        "assembly": [
+            "ldrh r2,[r0,#0x0]", 
+            "movw r3,#0x5a4d", 
+            "cmp r2,r3", 
+            "beq 0x000014ea", 
+            "movs r0,#0x0", 
+            "bx lr", 
+            "ldr r3,[r0,#0x3c]", 
+            "ldr r2,[r3,r0]", 
+            "adds r1,r3,r0", 
+            "movw r3,#0x4550", 
+            "cmp r2,r3", 
+            "bne 0x000014e6", 
+            "ldrh r2,[r1,#0x18]", 
+            "movw r3,#0x10b", 
+            "cmp r2,r3", 
+            "bne 0x000014e6", 
+            "movs r0,#0x1", 
+            "bx lr"
+        ], 
+        "function_address": {
+            "start": "000014dc", 
+            "end": "00001505"
+        }, 
+        "variable_metadata": {
+            "param_1": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "short *"
+            }
+        }, 
+        "func_name": "FUN_000014dc"
+    }, 
+    "000014d0": {
+        "decomp_code": "\n/* WARNING: Unknown calling convention: __cdecl */\n\nvoid __cdecl initterm(void)\n\n{\n                    /* WARNING: Could not recover jumptable at 0x000014d8. Too many branches */\n                    /* WARNING: Treating indirect jump as call */\n  (*pcRam00402020)();\n  return;\n}\n\n", 
+        "args_metadata": {}, 
+        "assembly": [
+            "movw r12,#0x2020", 
+            "movt r12,#0x40", 
+            "ldr.w pc,[r12,#0x0]"
+        ], 
+        "function_address": {
+            "start": "000014d0", 
+            "end": "000014db"
+        }, 
+        "variable_metadata": {}, 
+        "func_name": "initterm"
+    }, 
+    "00001508": {
+        "decomp_code": "\nint FUN_00001508(int param_1,uint param_2)\n\n{\n  int iVar1;\n  int iVar2;\n  uint uVar3;\n  \n  uVar3 = 0;\n  iVar2 = *(int *)(param_1 + 0x3c) + param_1;\n  iVar1 = (uint)*(ushort *)(iVar2 + 0x14) + iVar2 + 0x18;\n  if (*(ushort *)(iVar2 + 6) != 0) {\n    do {\n      if ((*(uint *)(iVar1 + 0xc) <= param_2) &&\n         (param_2 < *(int *)(iVar1 + 8) + *(uint *)(iVar1 + 0xc))) {\n        return iVar1;\n      }\n      uVar3 = uVar3 + 1;\n      iVar1 = iVar1 + 0x28;\n    } while (uVar3 < *(ushort *)(iVar2 + 6));\n  }\n  return 0;\n}\n\n", 
+        "args_metadata": {
+            "param_1": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "int", 
+                "register": "r0"
+            }, 
+            "param_2": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "uint", 
+                "register": "r1"
+            }
+        }, 
+        "assembly": [
+            "push {r4,r5,r11,lr}", 
+            "addw r11,sp,#0x8", 
+            "ldr r3,[r0,#0x3c]", 
+            "movs r4,#0x0", 
+            "adds r2,r3,r0", 
+            "ldrh r3,[r2,#0x14]", 
+            "ldrh r5,[r2,#0x6]", 
+            "adds r3,r3,r2", 
+            "adds.w r0,r3,#0x18", 
+            "cbz r5,0x00001538", 
+            "ldr r2,[r0,#0xc]", 
+            "cmp r1,r2", 
+            "bcc 0x00001530", 
+            "ldr r3,[r0,#0x8]", 
+            "adds r3,r3,r2", 
+            "cmp r1,r3", 
+            "bcc 0x0000153e", 
+            "adds r4,#0x1", 
+            "adds r0,#0x28", 
+            "cmp r4,r5", 
+            "bcc 0x00001522", 
+            "movs r0,#0x0", 
+            "pop.w {r4,r5,r11,pc}", 
+            "pop.w {r4,r5,r11,pc}"
+        ], 
+        "function_address": {
+            "start": "00001508", 
+            "end": "00001541"
+        }, 
+        "variable_metadata": {
+            "param_1": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "int"
+            }, 
+            "param_2": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "uint"
+            }
+        }, 
+        "func_name": "FUN_00001508"
+    }, 
+    "00001208": {
+        "decomp_code": "\nundefined4 FUN_00001208(void)\n\n{\n  int *piVar1;\n  undefined4 uVar2;\n  \n  if ((((*DAT_000012e0 == 0x5a4d) &&\n       (piVar1 = (int *)((int)DAT_000012e0 + *(int *)(DAT_000012e0 + 0x1e)), *piVar1 == 0x4550)) &&\n      ((short)piVar1[6] == 0x10b)) && ((0xe < (uint)piVar1[0x1d] && (piVar1[0x3a] != 0)))) {\n    uVar2 = 1;\n  }\n  else {\n    uVar2 = 0;\n  }\n  *DAT_000012dc = uVar2;\n  (*(code *)*DAT_000012d8)(1);\n  uVar2 = (*(code *)*DAT_000012d4)(0xffffffff);\n  *DAT_000012d0 = uVar2;\n  *DAT_000012cc = uVar2;\n  *(undefined4 *)*DAT_000012c4 = *DAT_000012c8;\n  *(undefined4 *)*DAT_000012bc = *DAT_000012c0;\n  FUN_00001360();\n  FUN_000015b4();\n  if (*DAT_000012b8 == 0) {\n    (*(code *)*DAT_000012b4)(DAT_000012b0);\n  }\n  if (*DAT_000012ac == -1) {\n    (*(code *)*DAT_000012a8)(0xffffffff);\n  }\n  return 0;\n}\n\n", 
+        "args_metadata": {}, 
+        "assembly": [
+            "push {r11,lr}", 
+            "mov r11,sp", 
+            "ldr r1,[0x000012e0]", 
+            "movw r2,#0x5a4d", 
+            "ldrh r3,[r1,#0x0]", 
+            "cmp r3,r2", 
+            "bne 0x00001242", 
+            "ldr r3,[r1,#0x3c]", 
+            "adds r1,r1,r3", 
+            "ldr r2,[r1,#0x0]", 
+            "movw r3,#0x4550", 
+            "cmp r2,r3", 
+            "bne 0x00001242", 
+            "ldrh r2,[r1,#0x18]", 
+            "movw r3,#0x10b", 
+            "cmp r2,r3", 
+            "bne 0x00001242", 
+            "ldr r3,[r1,#0x74]", 
+            "cmp r3,#0xe", 
+            "bls 0x00001242", 
+            "ldr.w r3,[r1,#0xe8]", 
+            "cbz r3,0x00001242", 
+            "movs r2,#0x1", 
+            "b 0x00001244", 
+            "movs r2,#0x0", 
+            "ldr r3,[0x000012dc]", 
+            "movs r0,#0x1", 
+            "str r2,[r3,#0x0]", 
+            "ldr r3,[0x000012d8]", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "ldr r3,[0x000012d4]", 
+            "mvn r0,#0x0", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "ldr r3,[0x000012d0]", 
+            "str r0,[r3,#0x0]", 
+            "ldr r3,[0x000012cc]", 
+            "str r0,[r3,#0x0]", 
+            "ldr r3,[0x000012c8]", 
+            "ldr r2,[r3,#0x0]", 
+            "ldr r3,[0x000012c4]", 
+            "ldr r3,[r3,#0x0]", 
+            "str r2,[r3,#0x0]", 
+            "ldr r3,[0x000012c0]", 
+            "ldr r2,[r3,#0x0]", 
+            "ldr r3,[0x000012bc]", 
+            "ldr r3,[r3,#0x0]", 
+            "str r2,[r3,#0x0]", 
+            "bl 0x00001360", 
+            "bl 0x000015b4", 
+            "ldr r3,[0x000012b8]", 
+            "ldr r3,[r3,#0x0]", 
+            "cbnz r3,0x0000128c", 
+            "ldr r3,[0x000012b4]", 
+            "ldr r0,[0x000012b0]", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "ldr r3,[0x000012ac]", 
+            "ldr r3,[r3,#0x0]", 
+            "cmp.w r3,#0xffffffff", 
+            "bne 0x000012a0", 
+            "ldr r3,[0x000012a8]", 
+            "mvn r0,#0x0", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "movs r0,#0x0", 
+            "pop.w {r11,pc}"
+        ], 
+        "function_address": {
+            "start": "00001208", 
+            "end": "000012a5"
+        }, 
+        "variable_metadata": {}, 
+        "func_name": "FUN_00001208"
+    }, 
+    "000015b4": {
+        "decomp_code": "\nundefined4 FUN_000015b4(void)\n\n{\n  return 0;\n}\n\n", 
+        "args_metadata": {}, 
+        "assembly": [
+            "movs r0,#0x0", 
+            "bx lr"
+        ], 
+        "function_address": {
+            "start": "000015b4", 
+            "end": "000015b7"
+        }, 
+        "variable_metadata": {}, 
+        "func_name": "FUN_000015b4"
+    }, 
+    "000012f8": {
+        "decomp_code": "\nvoid FUN_000012f8(void)\n\n{\n  code *pcVar1;\n  \n                    /* WARNING: Does not return */\n  pcVar1 = (code *)software_udf(0xfb,0x12fc);\n  (*pcVar1)();\n}\n\n", 
+        "args_metadata": {}, 
+        "assembly": [
+            "push {r0,r1}", 
+            "movs r0,#0x2", 
+            "udf #0xfb"
+        ], 
+        "function_address": {
+            "start": "000012f8", 
+            "end": "000012fd"
+        }, 
+        "variable_metadata": {}, 
+        "func_name": "FUN_000012f8"
+    }, 
+    "000010b4": {
+        "decomp_code": "\nint FUN_000010b4(void)\n\n{\n  bool bVar1;\n  bool bVar2;\n  int *piVar3;\n  int *piVar4;\n  undefined4 uVar5;\n  int iVar6;\n  int iVar7;\n  undefined4 *puVar8;\n  undefined4 in_cr0;\n  undefined4 in_cr13;\n  \n  piVar3 = DAT_00001204;\n  iVar7 = coprocessor_movefromRt(0xf,0,2,in_cr13,in_cr0);\n  iVar7 = *(int *)(iVar7 + 4);\n  bVar2 = false;\n  do {\n    DataMemoryBarrier(0x1b);\n    do {\n      ExclusiveAccess(piVar3);\n      iVar6 = *piVar3;\n      if (iVar6 != 0) goto LAB_000010dc;\n      bVar1 = (bool)hasExclusiveAccess(piVar3);\n    } while (!bVar1);\n    *piVar3 = iVar7;\nLAB_000010dc:\n    piVar4 = DAT_00001200;\n    puVar8 = DAT_000011e0;\n    DataMemoryBarrier(0x1b);\n    if (iVar6 == 0) goto LAB_000010ea;\n  } while (iVar6 != iVar7);\n  bVar2 = true;\nLAB_000010ea:\n  DataMemoryBarrier(0x1b);\n  if (*DAT_00001200 == 1) {\n    _amsg_exit(0x1f);\n    puVar8 = DAT_000011e0;\n  }\n  else {\n    DataMemoryBarrier(0x1b);\n    if (*DAT_00001200 == 0) {\n      DataMemoryBarrier(0x1b);\n      *DAT_00001200 = 1;\n      iVar7 = initterm_e(DAT_000011f8,DAT_000011fc);\n      puVar8 = DAT_000011e0;\n      if (iVar7 != 0) {\n        return 0xff;\n      }\n    }\n    else {\n      DAT_000011e0[7] = 1;\n    }\n  }\n  DataMemoryBarrier(0x1b);\n  if (*piVar4 == 1) {\n    initterm(DAT_000011f0,DAT_000011f4);\n    DataMemoryBarrier(0x1b);\n    *piVar4 = 2;\n  }\n  if (!bVar2) {\n    DataMemoryBarrier(0x1b);\n    do {\n      ExclusiveAccess(piVar3);\n      bVar2 = (bool)hasExclusiveAccess(piVar3);\n    } while (!bVar2);\n    *piVar3 = 0;\n    DataMemoryBarrier(0x1b);\n  }\n  piVar3 = DAT_000011ec;\n  if ((*DAT_000011ec != 0) && (iVar7 = FUN_00001544((int)DAT_000011ec), iVar7 != 0)) {\n    (*(code *)*piVar3)(0,2,0);\n  }\n  *(undefined4 *)*DAT_000011e8 = puVar8[1];\n  uVar5 = FUN_00001000(*puVar8,puVar8[2],puVar8[1]);\n  puVar8[6] = uVar5;\n  if (puVar8[3] != 0) {\n    if (puVar8[7] == 0) {\n      (**(code **)PTR_PTR__cexit_000011d8)();\n    }\n    return puVar8[6];\n  }\n  iVar7 = (*(code *)*DAT_000011e4)();\n  return iVar7;\n}\n\n", 
+        "args_metadata": {}, 
+        "assembly": [
+            "push {r3,r4,r5,r6,r7,r8,r11,lr}", 
+            "addw r11,sp,#0x18", 
+            "mov r7,sp", 
+            "mrc p15,0x0,r3,cr13,cr0,0x2", 
+            "ldr r1,[r3,#0x4]", 
+            "movs r6,#0x0", 
+            "ldr.w r8,[0x00001204]", 
+            "dmb #0x1b", 
+            "ldrex r2,[r8,#0x0]", 
+            "cbnz r2,0x000010dc", 
+            "strex r3,r1,[r8,#0x0]", 
+            "cmp r3,#0x0", 
+            "bne 0x000010ce", 
+            "dmb #0x1b", 
+            "cbz r2,0x000010ea", 
+            "cmp r2,r1", 
+            "beq 0x000010e8", 
+            "b 0x000010ca", 
+            "movs r6,#0x1", 
+            "ldr r5,[0x00001200]", 
+            "ldr r3,[r5,#0x0]", 
+            "dmb #0x1b", 
+            "cmp r3,#0x1", 
+            "bne 0x00001100", 
+            "movs r0,#0x1f", 
+            "bl 0x000014ac", 
+            "ldr r4,[0x000011e0]", 
+            "b 0x0000112a", 
+            "ldr r3,[r5,#0x0]", 
+            "dmb #0x1b", 
+            "cbnz r3,0x00001124", 
+            "movs r3,#0x1", 
+            "dmb #0x1b", 
+            "str r3,[r5,#0x0]", 
+            "ldr r1,[0x000011fc]", 
+            "ldr r0,[0x000011f8]", 
+            "bl 0x000014c4", 
+            "cmp r0,#0x0", 
+            "beq 0x000010fc", 
+            "movs r0,#0xff", 
+            "str r0,[r7,#0x0]", 
+            "ldr r4,[0x000011e0]", 
+            "b 0x000011c4", 
+            "ldr r4,[0x000011e0]", 
+            "movs r3,#0x1", 
+            "str r3,[r4,#0x1c]", 
+            "ldr r3,[r5,#0x0]", 
+            "dmb #0x1b", 
+            "cmp r3,#0x1", 
+            "bne 0x00001144", 
+            "ldr r1,[0x000011f4]", 
+            "ldr r0,[0x000011f0]", 
+            "bl 0x000014d0", 
+            "movs r3,#0x2", 
+            "dmb #0x1b", 
+            "str r3,[r5,#0x0]", 
+            "cbnz r6,0x0000115c", 
+            "dmb #0x1b", 
+            "movs r1,#0x0", 
+            "ldrex r2,[r8,#0x0]", 
+            "strex r3,r1,[r8,#0x0]", 
+            "cmp r3,#0x0", 
+            "bne 0x0000114c", 
+            "dmb #0x1b", 
+            "ldr r5,[0x000011ec]", 
+            "ldr r3,[r5,#0x0]", 
+            "cbz r3,0x00001174", 
+            "mov r0,r5", 
+            "bl 0x00001544", 
+            "cbz r0,0x00001174", 
+            "movs r2,#0x0", 
+            "movs r1,#0x2", 
+            "movs r0,#0x0", 
+            "ldr r3,[r5,#0x0]", 
+            "blx r3", 
+            "ldr r2,[r4,#0x4]", 
+            "ldr r3,[0x000011e8]", 
+            "ldr r3,[r3,#0x0]", 
+            "str r2,[r3,#0x0]", 
+            "ldr r2,[r4,#0x4]", 
+            "ldr r1,[r4,#0x8]", 
+            "ldr r0,[r4,#0x0]", 
+            "bl 0x00001000", 
+            "str r0,[r4,#0x18]", 
+            "ldr r3,[r4,#0xc]", 
+            "cbnz r3,0x00001194", 
+            "ldr r3,[0x000011e4]", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "ldr r3,[r4,#0x1c]", 
+            "cbnz r3,0x0000119e", 
+            "ldr r3,[0x000011d8]", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "ldr r0,[r7,#0x0]", 
+            "b 0x000011be", 
+            "ldr r0,[r4,#0x18]", 
+            "b 0x000011c4", 
+            "pop.w {r3,r4,r5,r6,r7,r8,r11,pc}"
+        ], 
+        "function_address": {
+            "start": "000010b4", 
+            "end": "000011c7"
+        }, 
+        "variable_metadata": {
+            "local_20": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [
+                    "0000111e", 
+                    "0000119e"
+                ], 
+                "type": "undefined4"
+            }
+        }, 
+        "func_name": "FUN_000010b4"
+    }, 
+    "0000167c": {
+        "decomp_code": "\nvoid __dllonexit(void)\n\n{\n                    /* WARNING: Could not recover jumptable at 0x00001684. Too many branches */\n                    /* WARNING: Treating indirect jump as call */\n  (*pcRam00402054)();\n  return;\n}\n\n", 
+        "args_metadata": {}, 
+        "assembly": [
+            "movw r12,#0x2054", 
+            "movt r12,#0x40", 
+            "ldr.w pc,[r12,#0x0]"
+        ], 
+        "function_address": {
+            "start": "0000167c", 
+            "end": "00001687"
+        }, 
+        "variable_metadata": {}, 
+        "func_name": "__dllonexit"
+    }, 
+    "00001494": {
+        "decomp_code": "\nundefined4 FUN_00001494(_onexit_t param_1,PVOID param_2,undefined4 param_3,undefined4 param_4)\n\n{\n  _onexit_t p_Var1;\n  undefined4 uVar2;\n  \n  p_Var1 = FUN_00001400(param_1,param_2,param_3,param_4);\n  if (p_Var1 == (_onexit_t)0x0) {\n    uVar2 = 0xffffffff;\n  }\n  else {\n    uVar2 = 0;\n  }\n  return uVar2;\n}\n\n", 
+        "args_metadata": {
+            "param_1": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "_onexit_t *", 
+                "register": "r0"
+            }, 
+            "param_2": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "void *", 
+                "register": "r1"
+            }, 
+            "param_3": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "undefined4", 
+                "register": "r2"
+            }, 
+            "param_4": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "undefined4", 
+                "register": "r3"
+            }
+        }, 
+        "assembly": [
+            "push {r11,lr}", 
+            "mov r11,sp", 
+            "bl 0x00001400", 
+            "cbnz r0,0x000014a6", 
+            "mvn r0,#0x0", 
+            "b 0x000014a8", 
+            "movs r0,#0x0", 
+            "pop.w {r11,pc}"
+        ], 
+        "function_address": {
+            "start": "00001494", 
+            "end": "000014ab"
+        }, 
+        "variable_metadata": {
+            "param_1": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "_onexit_t *"
+            }, 
+            "param_2": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "void *"
+            }, 
+            "param_3": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "undefined4"
+            }, 
+            "param_4": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "undefined4"
+            }
+        }, 
+        "func_name": "FUN_00001494"
+    }, 
+    "00001670": {
+        "decomp_code": "\n/* WARNING: Unknown calling convention -- yet parameter storage is locked */\n\nvoid _lock(int _File)\n\n{\n                    /* WARNING: Could not recover jumptable at 0x00001678. Too many branches */\n                    /* WARNING: Treating indirect jump as call */\n  (*pcRam00402050)(_File);\n  return;\n}\n\n", 
+        "args_metadata": {
+            "_File": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "count": 0, 
+                "type": "int", 
+                "register": "r0"
+            }
+        }, 
+        "assembly": [
+            "movw r12,#0x2050", 
+            "movt r12,#0x40", 
+            "ldr.w pc,[r12,#0x0]"
+        ], 
+        "function_address": {
+            "start": "00001670", 
+            "end": "0000167b"
+        }, 
+        "variable_metadata": {
+            "_File": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [], 
+                "type": "int"
+            }
+        }, 
+        "func_name": "_lock"
+    }, 
+    "000015b8": {
+        "decomp_code": "\nvoid FUN_000015b8(void)\n\n{\n  uint uVar1;\n  uint *puVar2;\n  uint uVar3;\n  undefined8 uVar4;\n  uint local_30 [2];\n  uint local_28;\n  uint local_24;\n  uint local_20;\n  uint local_1c;\n  undefined4 local_14;\n  \n  puVar2 = DAT_00001654;\n  uVar1 = DAT_00001650;\n  local_28 = 0;\n  local_24 = 0;\n  uVar3 = *DAT_00001654;\n  if (uVar3 == DAT_00001650) {\n    (*(code *)*DAT_0000164c)(&local_28);\n    local_30[0] = local_28 ^ local_24;\n    uVar3 = (*(code *)*DAT_00001648)();\n    local_30[0] = local_30[0] ^ uVar3;\n    uVar3 = (*(code *)*DAT_00001644)();\n    local_30[0] = local_30[0] ^ uVar3;\n    uVar4 = (*(code *)*DAT_00001640)();\n    local_14 = (undefined4)((ulonglong)uVar4 >> 0x20);\n    local_30[0] = local_30[0] ^ (uint)uVar4;\n    (*(code *)*DAT_0000163c)(&local_20);\n    uVar3 = (uint)local_30 ^ local_1c ^ local_20 ^ local_30[0];\n    if (uVar3 == uVar1) {\n      uVar3 = DAT_00001638;\n    }\n    *puVar2 = uVar3;\n  }\n  *DAT_00001634 = ~uVar3;\n  return;\n}\n\n", 
+        "args_metadata": {}, 
+        "assembly": [
+            "push {r4,r5,r11,lr}", 
+            "addw r11,sp,#0x8", 
+            "sub sp,#0x20", 
+            "ldr r4,[0x00001654]", 
+            "movs r3,#0x0", 
+            "ldr r5,[0x00001650]", 
+            "str r3,[sp,#0x8]", 
+            "str r3,[sp,#0xc]", 
+            "ldr r3,[r4,#0x0]", 
+            "cmp r3,r5", 
+            "bne 0x00001626", 
+            "ldr r3,[0x0000164c]", 
+            "add r0,sp,#0x8", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "ldr r2,[sp,#0xc]", 
+            "ldr r3,[sp,#0x8]", 
+            "eors r3,r2", 
+            "str r3,[sp,#0x0]", 
+            "ldr r3,[0x00001648]", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "ldr r3,[sp,#0x0]", 
+            "eors r3,r0", 
+            "str r3,[sp,#0x0]", 
+            "ldr r3,[0x00001644]", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "ldr r3,[sp,#0x0]", 
+            "eors r3,r0", 
+            "str r3,[sp,#0x0]", 
+            "ldr r3,[0x00001640]", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "ldr r3,[sp,#0x0]", 
+            "str r1,[sp,#0x1c]", 
+            "eors r3,r0", 
+            "str r3,[sp,#0x0]", 
+            "ldr r3,[0x0000163c]", 
+            "add r0,sp,#0x10", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "ldr r2,[sp,#0x14]", 
+            "ldr r3,[sp,#0x10]", 
+            "eors r2,r3", 
+            "ldr r3,[sp,#0x0]", 
+            "eors r2,r3", 
+            "mov r3,sp", 
+            "eors r3,r2", 
+            "cmp r3,r5", 
+            "bne 0x00001624", 
+            "ldr r3,[0x00001638]", 
+            "str r3,[r4,#0x0]", 
+            "ldr r2,[0x00001634]", 
+            "mvns r3,r3", 
+            "str r3,[r2,#0x0]", 
+            "add sp,#0x20", 
+            "pop.w {r4,r5,r11,pc}"
+        ], 
+        "function_address": {
+            "start": "000015b8", 
+            "end": "00001631"
+        }, 
+        "variable_metadata": {
+            "local_1c": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [
+                    "00001610"
+                ], 
+                "type": "undefined4"
+            }, 
+            "local_28": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [
+                    "000015c8", 
+                    "000015dc"
+                ], 
+                "type": "undefined4"
+            }, 
+            "local_20": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [
+                    "00001612"
+                ], 
+                "type": "undefined4"
+            }, 
+            "local_30": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [
+                    "000015e0", 
+                    "000015e8", 
+                    "000015ec", 
+                    "000015f4", 
+                    "000015f8", 
+                    "00001600", 
+                    "00001606", 
+                    "00001616"
+                ], 
+                "type": "undefined4"
+            }, 
+            "local_14": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [
+                    "00001602"
+                ], 
+                "type": "undefined4"
+            }, 
+            "local_24": {
+                "agg": {
+                    "is_enum": false, 
+                    "is_union": false, 
+                    "is_struct": false
+                }, 
+                "addresses": [
+                    "000015ca", 
+                    "000015da"
+                ], 
+                "type": "undefined4"
+            }
+        }, 
+        "func_name": "FUN_000015b8"
+    }, 
+    "000013b8": {
+        "decomp_code": "\nundefined4 FUN_000013b8(void)\n\n{\n  int *piVar1;\n  int *piVar2;\n  undefined4 *puVar3;\n  int iVar4;\n  \n  piVar2 = DAT_000013fc;\n  if (*DAT_000013fc == 0) {\n    puVar3 = (undefined4 *)(*(code *)*DAT_000013f8)(0x20,4);\n    iVar4 = (*(code *)*DAT_000013f4)();\n    piVar1 = DAT_000013f0;\n    *piVar2 = iVar4;\n    *piVar1 = iVar4;\n    if (puVar3 == (undefined4 *)0x0) {\n      return 0x18;\n    }\n    *puVar3 = 0;\n  }\n  return 0;\n}\n\n", 
+        "args_metadata": {}, 
+        "assembly": [
+            "push {r4,r5,r11,lr}", 
+            "addw r11,sp,#0x8", 
+            "ldr r4,[0x000013fc]", 
+            "ldr r3,[r4,#0x0]", 
+            "cbnz r3,0x000013e8", 
+            "ldr r3,[0x000013f8]", 
+            "movs r1,#0x4", 
+            "movs r0,#0x20", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "ldr r3,[0x000013f4]", 
+            "mov r5,r0", 
+            "ldr r3,[r3,#0x0]", 
+            "blx r3", 
+            "ldr r3,[0x000013f0]", 
+            "str r0,[r4,#0x0]", 
+            "str r0,[r3,#0x0]", 
+            "cbnz r5,0x000013e4", 
+            "movs r0,#0x18", 
+            "b 0x000013ea", 
+            "movs r3,#0x0", 
+            "str r3,[r5,#0x0]", 
+            "movs r0,#0x0", 
+            "pop.w {r4,r5,r11,pc}"
+        ], 
+        "function_address": {
+            "start": "000013b8", 
+            "end": "000013ed"
+        }, 
+        "variable_metadata": {}, 
+        "func_name": "FUN_000013b8"
+    }
+}

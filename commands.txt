@@ -1,6 +1,17 @@
+Step 1
 python scripts/decompilation/parallel_decomp.py \
     -s \
     --binary_path /app/binaries/windows_helloWorld \
     --ghidra_path analyzeHeadless \
     --project_path /app/ghidra_projects \
     --output_dir /app/results/decompiled_stripped
+
+Step 2
+python scripts/data_processing/process_decompiled_data.py -p \
+    --stripped_path /app/results/decompiled_stripped \
+    --output_dir /app/results/processed_for_prediction
+
+Step 3
+python scripts/data_processing/convert_to_prediction_format.py \
+    --input_path /app/results/processed_for_prediction \
+    --output_dir /app/results/prediction_format

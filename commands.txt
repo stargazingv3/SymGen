@@ -13,26 +13,26 @@ python scripts/data_processing/process_decompiled_data.py -p \
 
 Step 3
 python scripts/data_processing/convert_to_prediction_format.py \
-    --input_path /app/results/processed_for_prediction \
-    --output_dir /app/results/prediction_format
+    --input_path /app/results/wannacry/processed_for_prediction \
+    --output_dir /app/results/wannacry/prediction_format
 
 Step 4
 python scripts/model_training/batch_predict.py \
-    --input_path /app/results/prediction_format/windows_helloWorld.json \
-    --output_dir /app/results/predictions \
+    --input_path /app/results/wannacry/prediction_format/wannacry.exe.json \
+    --output_dir /app/results/wannacry/predictions \
     --base_model "codellama/CodeLlama-34b-Instruct-hf" \
     --lora_weights /app/lora_weights
 
 Step 5
 python /app/scripts/data_processing/map_predictions_to_functions.py \
-  --ghidra_json /app/results/decompiled_stripped/windows_helloWorld.json \
-  --predictions_json /app/results/predictions/predictions.json \
-  --output /app/results/mapped_functions.json
+  --ghidra_json /app/results/wannacry/decompiled_stripped/wannacry.exe.json \
+  --predictions_json /app/results/wannacry/predictions/predictions.json \
+  --output /app/results/wannacry/mapped_functions.json
 
 Step 6
 python /app/scripts/summary_generation/generate_function_summaries.py \
-  --input_file /app/results/mapped_functions.json \
-  --output_file /app/results/mapped_functions_with_summaries.json \
+  --input_file /app/results/wannacry/mapped_functions.json \
+  --output_file /app/results/wannacry/mapped_functions_with_summaries.json \
   --base_model "codellama/CodeLlama-34b-Instruct-hf" \
   --load_8bit True
 

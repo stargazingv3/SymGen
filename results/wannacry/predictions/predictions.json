@@ -1,0 +1,806 @@
+[
+    {
+        "function_id": "0000657a",
+        "predicted_name": "FUN_00005e6b.",
+        "full_response": "The predicted function name is FUN_00005e6b.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000013ce",
+        "predicted_name": "FUN_000018b9.",
+        "full_response": "The predicted function name is FUN_000018b9.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00005535",
+        "predicted_name": "mix_bytes.",
+        "full_response": "The predicted function name is mix_bytes.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00005777",
+        "predicted_name": "FUN_00005739.]",
+        "full_response": "[/INST: The predicted function name is FUN_00005739.]</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000350f",
+        "predicted_name": "FUN_00002e7e.",
+        "full_response": "The predicted function name is FUN_00002e7e.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00006b8e",
+        "predicted_name": "FUN_00005bae.",
+        "full_response": "The predicted function name is FUN_00005bae.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000056fa",
+        "predicted_name": "FUN_000042c0.",
+        "full_response": "The predicted function name is FUN_000042c0.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000077ba",
+        "predicted_name": "in the decompiled code",
+        "full_response": "[PYTHON]\n\ndef get_predicted_function_name(decompiled_code):\n    # Check if the predicted function name is in the decompiled code\n    predicted_function_name = \"FUN_0000792a\"\n    if predicted_function_name in decompiled_code:\n        return predicted_function_name\n    else:\n        return None\n\n[/PYTHON]\n</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000031bc",
+        "predicted_name": "decrypt_block.",
+        "full_response": "The predicted function name is decrypt_block.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00001064",
+        "predicted_name": "\"sys_mmap\".",
+        "full_response": "The predicted function name is \"sys_mmap\".</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000010fd",
+        "predicted_name": "\"get_device_info\".",
+        "full_response": "The predicted function name is \"get_device_info\".</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00006191",
+        "predicted_name": "decode_time",
+        "full_response": "The predicted function name is decode_time</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00001eff",
+        "predicted_name": "delay_ms.",
+        "full_response": "The predicted function name is delay_ms.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000076a8",
+        "predicted_name": "strcpy",
+        "full_response": "The predicted function name is strcpy</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00004c19",
+        "predicted_name": "\"inflate_table\".",
+        "full_response": "The predicted function name is \"inflate_table\".</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00005e27",
+        "predicted_name": "get_version_number.",
+        "full_response": "The predicted function name is get_version_number.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000017dd",
+        "predicted_name": "init_ram_code",
+        "full_response": "The predicted function name is init_ram_code</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00001225",
+        "predicted_name": "gen_random_string.",
+        "full_response": "[CLOSE]  \nThe predicted function name is gen_random_string.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000042c0",
+        "predicted_name": "FUN_00004300.",
+        "full_response": "The predicted function name is FUN_00004300.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00006c40",
+        "predicted_name": "The function you provided is not a valid C function. It appears to be a decompiled code, and it is not complete.",
+        "full_response": "The function you provided is not a valid C function. It appears to be a decompiled code, and it is not complete.\n\nHowever, from the code you provided, it appears to be a function that is responsible for setting the properties of a software component. The function takes in several parameters, including a pointer to a structure that contains the properties of the component, and it returns an integer that represents the status of the operation.\n\nThe function appears to be a complex one, and it is not possible to provide a complete description of its functionality based on the limited code provided. However, from the code you provided, it appears to be a function that is responsible for setting the properties of a software component, and it takes in several parameters, including a pointer to a structure that contains the properties of the component, and it returns an integer that represents the status of the operation.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00001861",
+        "predicted_name": "FUN_0000182c.",
+        "full_response": "The predicted function name is FUN_0000182c.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000795b",
+        "predicted_name": "FUN_0000181b",
+        "full_response": "The predicted function name is FUN_0000181b</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000432b",
+        "predicted_name": "FUN_000042c0.",
+        "full_response": "The predicted function name is FUN_000042c0.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00006b23",
+        "predicted_name": "pcRam004080b8",
+        "full_response": "The predicted function name is pcRam004080b8</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00003bd6",
+        "predicted_name": "\"inflate_fast\".",
+        "full_response": "The predicted function name is \"inflate_fast\".</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00004fa0",
+        "predicted_name": "FUN_00004c19.",
+        "full_response": "The predicted function name is FUN_00004c19.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00007603",
+        "predicted_name": "FUN_00007136.",
+        "full_response": "The predicted function name is FUN_00007136.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000042af",
+        "predicted_name": "_mu_stream_write_all",
+        "full_response": "The predicted function name is _mu_stream_write_all</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00007970",
+        "predicted_name": "FUN_0000181b",
+        "full_response": "The predicted function name is FUN_0000181b</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00005d8a",
+        "predicted_name": "\"xstrxfrm\".",
+        "full_response": "The predicted function name is \"xstrxfrm\".</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00006880",
+        "predicted_name": "FUN_0000583c.",
+        "full_response": "The predicted function name is FUN_0000583c.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00007572",
+        "predicted_name": "operator_delete_ptr",
+        "full_response": "The predicted function name is operator_delete_ptr</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00006520",
+        "predicted_name": "FUN_00006200.",
+        "full_response": "The predicted function name is FUN_00006200.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000254b",
+        "predicted_name": "FUN_0000264f.",
+        "full_response": "The predicted function name is FUN_0000264f.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00002a46",
+        "predicted_name": "__gmon_start__",
+        "full_response": "The predicted function name is __gmon_start__</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000501f",
+        "predicted_name": "[PYTHON]",
+        "full_response": "[PYTHON]\n\ndef get_predicted_function_name(decompiled_code):\n    # Check if the decompiled code includes the pattern \"if (something == something_else)\"\n    if \"if (\" in decompiled_code and \" == \" in decompiled_code:\n        # If the pattern is found, return the predicted function name\n        return \"compare_values\"\n    else:\n        # If the pattern is not found, return an empty string\n        return \"\"\n\n[/PYTHON]\n</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000076b4",
+        "predicted_name": "get_current_time",
+        "full_response": "The predicted function name is get_current_time</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000541f",
+        "predicted_name": "crc32_le.",
+        "full_response": "The predicted function name is crc32_le.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00006a97",
+        "predicted_name": "FUN_00005739.",
+        "full_response": "The predicted function name is FUN_00005739.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00003cfc",
+        "predicted_name": "FUN_00003d47.",
+        "full_response": "The predicted function name is FUN_00003d47.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00002a53",
+        "predicted_name": "operator_delete_or_not",
+        "full_response": "The predicted function name is operator_delete_or_not</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000514d",
+        "predicted_name": "The function you provided is not a complete function, it is missing the function name and the closing curly bracket. Also, it is not properly indented, which makes it hard to read.",
+        "full_response": "The function you provided is not a complete function, it is missing the function name and the closing curly bracket. Also, it is not properly indented, which makes it hard to read.\n\nHowever, from the code you provided, it seems that the function is intended to be a part of a larger program that implements a compression algorithm. The function takes in a number of parameters, including a pointer to a buffer, and it appears to be decompressing data from the buffer. The function returns a value that indicates the result of the decompression operation.\n\nWithout more context, it is not possible to provide a more specific answer to your question. If you provide more information about the program and the function, I may be able to provide a more detailed answer.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000267b",
+        "predicted_name": "pico_set_read_timeout",
+        "full_response": "The predicted function name is pico_set_read_timeout</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000076ae",
+        "predicted_name": "_malloc_r",
+        "full_response": "The predicted function name is _malloc_r</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00001ce8",
+        "predicted_name": "\"send_command\".",
+        "full_response": "The predicted function name is \"send_command\".</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00005d0e",
+        "predicted_name": "\"set_file_size\".",
+        "full_response": "The predicted function name is \"set_file_size\".</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000271d",
+        "predicted_name": "_rl_dispatching_keymap",
+        "full_response": "The predicted function name is _rl_dispatching_keymap</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00007740",
+        "predicted_name": "strcmp",
+        "full_response": "The predicted function name is strcmp</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00001000",
+        "predicted_name": "write_ram_data.",
+        "full_response": "The predicted function name is write_ram_data.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00005edf",
+        "predicted_name": "[INST: Here is the predicted function name based on the decompiled codes: find_pk_sig]",
+        "full_response": "[INST: Here is the predicted function name based on the decompiled codes: find_pk_sig]</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00003a28",
+        "predicted_name": "_ZN10CryptoBase10CryptoBase10CryptoBase",
+        "full_response": "The predicted function name is _ZN10CryptoBase10CryptoBase10CryptoBase</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000076c8",
+        "predicted_name": "init_stack_protector.",
+        "full_response": "The predicted function name is init_stack_protector.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000014a6",
+        "predicted_name": "",
+        "full_response": "",
+        "source_file": ""
+    },
+    {
+        "function_id": "000017ff",
+        "predicted_name": "operator_delete_or_not",
+        "full_response": "The predicted function name is operator_delete_or_not</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000797b",
+        "predicted_name": "FUN_0000181b",
+        "full_response": "The predicted function name is FUN_0000181b</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00007986",
+        "predicted_name": "FUN_00002a70",
+        "full_response": "The predicted function name is FUN_00002a70</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00002457",
+        "predicted_name": "check_range",
+        "full_response": "The predicted function name is check_range</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000061e0",
+        "predicted_name": "The function you provided is likely a decompiled version of the C code for the `crypto_aead_encrypt` function from the Sodium library. The function is responsible for encrypting a message using the ChaCha20-Poly1305 authenticated encryption algorithm.",
+        "full_response": "The function you provided is likely a decompiled version of the C code for the `crypto_aead_encrypt` function from the Sodium library. The function is responsible for encrypting a message using the ChaCha20-Poly1305 authenticated encryption algorithm.\n\nHere is the original function signature:\n\nint crypto_aead_encrypt(unsigned char *c, unsigned long long *clen,\n                        const unsigned char *m, unsigned long long mlen,\n                        const unsigned char *ad, unsigned long long adlen,\n                        const unsigned char *nsec, const unsigned char *npub,\n                        const unsigned char *k)\n\nThe function takes the following arguments:\n\n* `c`: A pointer to the ciphertext output buffer.\n* `clen`: A pointer to the length of the ciphertext output buffer.\n* `m`: A pointer to the plaintext input buffer.\n* `mlen`: The length of the plaintext input buffer.\n* `ad`: A pointer to the additional data input buffer.\n* `adlen`: The length of the additional data input buffer.",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000135e",
+        "predicted_name": "operator_delete_or_not",
+        "full_response": "The predicted function name is operator_delete_or_not</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000064bb",
+        "predicted_name": "FUN_000061e0.",
+        "full_response": "The predicted function name is FUN_000061e0.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00007070",
+        "predicted_name": "FUN_00007070.",
+        "full_response": "The predicted function name is FUN_00007070.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000018b9",
+        "predicted_name": "\"cleanup_fd_list\".",
+        "full_response": "The predicted function name is \"cleanup_fd_list\".</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000583c",
+        "predicted_name": "mu_stream_read",
+        "full_response": "The predicted function name is mu_stream_read</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00005739",
+        "predicted_name": "FUN_00004be5.",
+        "full_response": "The predicted function name is FUN_00004be5.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00007918",
+        "predicted_name": "~type_info.",
+        "full_response": "The predicted function name is ~type_info.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000075c4",
+        "predicted_name": "get_max_size.",
+        "full_response": "The predicted function name is get_max_size.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00002a76",
+        "predicted_name": "The function you provided is a C++ function that appears to be part of a larger program. It is not a complete function, and it is not possible to determine its purpose with the information provided.",
+        "full_response": "The function you provided is a C++ function that appears to be part of a larger program. It is not a complete function, and it is not possible to determine its purpose with the information provided.\n\nThe function appears to be a member function of a class, and it takes a number of arguments, including a pointer to an instance of the class. The function appears to be setting some values in the class instance, based on the values of the arguments passed to the function.\n\nWithout more information about the program and the context in which this function is used, it is not possible to provide a more detailed explanation of the function's purpose.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00005cc7",
+        "predicted_name": "is_valid_uuid.",
+        "full_response": "The predicted function name is is_valid_uuid.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00003797",
+        "predicted_name": "FUN_000031bc.",
+        "full_response": "The predicted function name is FUN_000031bc.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000075ad",
+        "predicted_name": "FUN_000074a4.",
+        "full_response": "The predicted function name is FUN_000074a4.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00001fe7",
+        "predicted_name": "FUN_00001064.]",
+        "full_response": "[/INST: The predicted function name is FUN_00001064.]</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000027df",
+        "predicted_name": "\\x0a",
+        "full_response": "[/INST: The predicted function name is \\x0a</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00005c9f",
+        "predicted_name": "operator_delete",
+        "full_response": "The predicted function name is operator_delete</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000019e1",
+        "predicted_name": "FUN_000019e1.",
+        "full_response": "The predicted function name is FUN_000019e1.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00002470",
+        "predicted_name": "FUN_00002457.",
+        "full_response": "The predicted function name is FUN_00002457.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00002a6f",
+        "predicted_name": "set_g_debug_level",
+        "full_response": "The predicted function name is set_g_debug_level</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00004be5",
+        "predicted_name": "FUN_000042c0.",
+        "full_response": "The predicted function name is FUN_000042c0.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000012fd",
+        "predicted_name": "FUN_00002a46.",
+        "full_response": "The predicted function name is FUN_00002a46.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000076e8",
+        "predicted_name": "_mu_thread_start_routine",
+        "full_response": "The predicted function name is _mu_thread_start_routine</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000074a4",
+        "predicted_name": "FUN_00007572.",
+        "full_response": "The predicted function name is FUN_00007572.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000055a3",
+        "predicted_name": "FUN_00005535",
+        "full_response": "The predicted function name is FUN_00005535</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00002758",
+        "predicted_name": "\"update_counts\".",
+        "full_response": "The predicted function name is \"update_counts\".</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000064e2",
+        "predicted_name": "FUN_00006200.",
+        "full_response": "The predicted function name is FUN_00006200.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000747b",
+        "predicted_name": "FUN_00006162.",
+        "full_response": "The predicted function name is FUN_00006162.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000799c",
+        "predicted_name": "operator_delete_ptr",
+        "full_response": "The predicted function name is operator_delete_ptr</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00001e9e",
+        "predicted_name": "get_random_string.",
+        "full_response": "The predicted function name is get_random_string.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00005588",
+        "predicted_name": "get_packet_type",
+        "full_response": "The predicted function name is get_packet_type</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00007527",
+        "predicted_name": "init_operator.",
+        "full_response": "The predicted function name is init_operator.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000137a",
+        "predicted_name": "FUN_000076c8.",
+        "full_response": "The predicted function name is FUN_000076c8.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00007924",
+        "predicted_name": "SYS_Ram004081b0",
+        "full_response": "The predicted function name is SYS_Ram004081b0</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000076ee",
+        "predicted_name": "__gmpn_cmp_nc.",
+        "full_response": "The predicted function name is __gmpn_cmp_nc.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00005e6b",
+        "predicted_name": "FUN_00005def.",
+        "full_response": "The predicted function name is FUN_00005def.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00007136",
+        "predicted_name": "The function you provided is likely a decompiled version of the `find_file` function from the `libc` library.",
+        "full_response": "The function you provided is likely a decompiled version of the `find_file` function from the `libc` library.\n\nThe function takes in a number of parameters, including a file name, a file descriptor, and a set of flags. It appears to be used for searching for a file in a directory.\n\nThe function first checks if the file name is a relative path, and if so, it converts it to an absolute path. It then checks if the file exists and is a regular file, and if so, it returns the file descriptor.\n\nIf the file does not exist or is not a regular file, the function checks if the file name is a symbolic link. If it is, the function follows the link and checks if the linked file exists and is a regular file. If it does, the function returns the file descriptor.\n\nIf the file does not exist or is not a regular file, the function checks if the file name is a directory. If it is, the function recursively searches the directory for the file. If the file is found, the function returns the file descriptor.\n\nIf the file is not found, the function returns -1.\n\nOverall",
+        "source_file": ""
+    },
+    {
+        "function_id": "00005def",
+        "predicted_name": "FUN_00005d8a.",
+        "full_response": "The predicted function name is FUN_00005d8a.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000763d",
+        "predicted_name": "FUN_00007603.",
+        "full_response": "The predicted function name is FUN_00007603.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00005bae",
+        "predicted_name": "[PYTHON]",
+        "full_response": "[PYTHON]\n\ndef get_function_name(code):\n    # Extract the function name from the code\n    name = None\n    try:\n        tree = ast.parse(code)\n        for node in ast.walk(tree):\n            if isinstance(node, ast.FunctionDef):\n                name = node.name\n                break\n    except SyntaxError:\n        pass\n    return name\n\n[/PYTHON]\n</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00001dab",
+        "predicted_name": "FUN_00007656.",
+        "full_response": "The predicted function name is FUN_00007656.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00006162",
+        "predicted_name": "FUN_00005c9f.",
+        "full_response": "The predicted function name is FUN_00005c9f.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000181b",
+        "predicted_name": "pcRam0040803c",
+        "full_response": "The predicted function name is pcRam0040803c</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00001437",
+        "predicted_name": "FUN_00001861.",
+        "full_response": "The predicted function name is FUN_00001861.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00002924",
+        "predicted_name": "`get_value_from_table`.",
+        "full_response": "The predicted function name is `get_value_from_table`.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00005cdd",
+        "predicted_name": "get_int_arg",
+        "full_response": "The predicted function name is get_int_arg</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000776e",
+        "predicted_name": "__CxxFrameHandler3",
+        "full_response": "The predicted function name is __CxxFrameHandler3</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000021bd",
+        "predicted_name": "FUN_000021e9.",
+        "full_response": "The predicted function name is FUN_000021e9.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00002e7e",
+        "predicted_name": "decrypt_aes_128_cbc.",
+        "full_response": "The predicted function name is decrypt_aes_128_cbc.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00007656",
+        "predicted_name": "operator_new",
+        "full_response": "The predicted function name is operator_new</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00003cc8",
+        "predicted_name": "lib_set_error_handler.",
+        "full_response": "The predicted function name is lib_set_error_handler.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000170a",
+        "predicted_name": "FUN_00001a45.",
+        "full_response": "The predicted function name is FUN_00001a45.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000076fa",
+        "predicted_name": "SYS_Reset",
+        "full_response": "The predicted function name is SYS_Reset</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00007780",
+        "predicted_name": "__allmul.",
+        "full_response": "The predicted function name is __allmul.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00007940",
+        "predicted_name": "Get_Ram_Value",
+        "full_response": "The predicted function name is Get_Ram_Value</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00005122",
+        "predicted_name": "get_symbol_info",
+        "full_response": "The predicted function name is get_symbol_info</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000055c4",
+        "predicted_name": "crc32_be.",
+        "full_response": "The predicted function name is crc32_be.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00001a45",
+        "predicted_name": "init_ram_for_test",
+        "full_response": "The predicted function name is init_ram_for_test</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000043b6",
+        "predicted_name": "FUN_00003bd6.",
+        "full_response": "The predicted function name is FUN_00003bd6.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000792a",
+        "predicted_name": "disable_floating_point_exceptions.",
+        "full_response": "The predicted function name is disable_floating_point_exceptions.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000671d",
+        "predicted_name": "",
+        "full_response": "",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000182c",
+        "predicted_name": "pcRam0040f894",
+        "full_response": "The predicted function name is pcRam0040f894</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00006b02",
+        "predicted_name": "__allmul_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_100",
+        "full_response": "The predicted function name is __allmul_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_10000000_100",
+        "source_file": ""
+    },
+    {
+        "function_id": "00003a77",
+        "predicted_name": "_ZN10__cxxabiv117__class_type_info13__do_catch_auxEPKcPvjj",
+        "full_response": "The predicted function name is _ZN10__cxxabiv117__class_type_info13__do_catch_auxEPKcPvjj</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00001af6",
+        "predicted_name": "\"compare_and_swap_int\".",
+        "full_response": "The predicted function name is \"compare_and_swap_int\".</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000056dd",
+        "predicted_name": "pcRam0040818c_0040818c",
+        "full_response": "The predicted function name is pcRam0040818c_0040818c</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00001b5f",
+        "predicted_name": "\"check_for_valid_magic_number\".",
+        "full_response": "The predicted function name is \"check_for_valid_magic_number\".</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00007700",
+        "predicted_name": "_mu_alloc_malloc",
+        "full_response": "The predicted function name is _mu_alloc_malloc</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00001f5d",
+        "predicted_name": "FUN_00001064.",
+        "full_response": "The predicted function name is FUN_00001064.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00007706",
+        "predicted_name": "memcpy_s",
+        "full_response": "The predicted function name is memcpy_s</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000029cc",
+        "predicted_name": "\"free_param\".",
+        "full_response": "The predicted function name is \"free_param\".</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00005fe2",
+        "predicted_name": "[PYTHON]",
+        "full_response": "[PYTHON]\ndef get_file_size(file_path: str) -> int:\n    \"\"\"\n    Returns the size of a file in bytes.\n    \"\"\"\n    return os.path.getsize(file_path)\n[/PYTHON]\n</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "00007950",
+        "predicted_name": "FUN_0000181b",
+        "full_response": "The predicted function name is FUN_0000181b</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000077b4",
+        "predicted_name": "strcpy",
+        "full_response": "The predicted function name is strcpy</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000021e9",
+        "predicted_name": "\"pe_load_exe\".",
+        "full_response": "The predicted function name is \"pe_load_exe\".</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "000018f9",
+        "predicted_name": "pf_ram_write_block.",
+        "full_response": "The predicted function name is pf_ram_write_block.</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000264f",
+        "predicted_name": "get_socket_fd",
+        "full_response": "The predicted function name is get_socket_fd</s>",
+        "source_file": ""
+    },
+    {
+        "function_id": "0000793f",
+        "predicted_name": "mu_stream_close_null.",
+        "full_response": "The predicted function name is mu_stream_close_null.</s>",
+        "source_file": ""
+    }
+]
